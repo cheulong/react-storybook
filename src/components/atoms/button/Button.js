@@ -2,17 +2,30 @@ import React from 'react';
 import { StyledButton, StyledLinkedButton } from './Button.styles';
 import { ButtonIcon } from './ButtonIcon';
 
-const Button = ({ children, href, onClick, icon, variant = 'primary' }) => {
+const Button = ({
+  label,
+  href,
+  onClick,
+  icon,
+  backgroundColor,
+  variant = 'primary',
+  ...props
+}) => {
   if (!href)
     return (
-      <StyledButton variant={variant} onClick={onClick}>
+      <StyledButton
+        style={backgroundColor && { backgroundColor }}
+        variant={variant}
+        onClick={onClick}
+        {...props}
+      >
         {icon && <ButtonIcon name={icon} />}
-        {children}
+        {label}
       </StyledButton>
     );
   return (
     <StyledLinkedButton variant={variant} href={href}>
-      {icon && <ButtonIcon name={icon} />} {children}
+      {icon && <ButtonIcon name={icon} />} {label}
     </StyledLinkedButton>
   );
 };
