@@ -11,6 +11,10 @@ export const StyledButton = styled.button`
   padding: 10px;
   cursor: pointer;
   text-decoration: none;
+  .button__icon {
+    display: inline-block;
+    margin-right: 4px;
+  }
 `;
 
 export const StyledLinkedButton = styled(StyledButton).attrs({ as: 'a' })`

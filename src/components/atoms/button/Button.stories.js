@@ -6,9 +6,11 @@ const buttonClicked = (e) => {
   alert('Hello');
 };
 
-export const basicButton = () => <Button>Basic button</Button>;
+export const basicButton = () => <Button icon='plus'>Basic button</Button>;
 export const secondaryButton = () => (
-  <Button variant='secondary'>Basic button</Button>
+  <Button variant='secondary' icon='x'>
+    Secondary button
+  </Button>
 );
 export const thirdButton = () => <Button variant='third'>Basic button</Button>;
 export const functionButton = () => (
