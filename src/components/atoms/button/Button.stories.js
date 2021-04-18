@@ -39,7 +39,7 @@ linkedButton.args = {
 
 export default {
   component: Button,
-  title: 'Button',
+  title: 'Atoms/Button',
   decorators: [withDesign],
   argTypes: {
     backgroundColor: { control: 'color' },
